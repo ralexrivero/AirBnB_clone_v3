@@ -8,10 +8,11 @@ from models import storage
 from os import getenv
 import jsonify
 
+
 app = Flask(__name__)
-admin = Blueprint('admin', __name__, template_folder='templates')
-app.register_blueprint(part_1)
-cors = Cors(app, resources={})
+app.register_blueprint(app_views)
+cors = Cors(app, resources={r'/api/*': {'origins': '0.0.0.0'}})
+
 
 @app.teardown_appcontext
 def downtear(ex):
@@ -27,7 +28,7 @@ def page_not_found(e):
 
 if __name__ == "__main__":
     if getenv('HBNB_API_HOST'):
-        port = getenv('HBNB_API_HOST')
+        host = getenv('HBNB_API_HOST')
     else:
         host = '0.0.0.0'
     if getenv('HBNB_API_HOST'):
