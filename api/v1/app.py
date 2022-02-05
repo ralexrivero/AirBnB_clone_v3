@@ -11,7 +11,7 @@ import jsonify
 app = Flask(__name__)
 admin = Blueprint('admin', __name__, template_folder='templates')
 app.register_blueprint(part_1)
-
+cors = Cors(app, resources={})
 
 @app.teardown_appcontext
 def downtear(ex):
