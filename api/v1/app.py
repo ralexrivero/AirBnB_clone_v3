@@ -35,4 +35,4 @@ if __name__ == "__main__":
         port = getenv('HBNB_API_PORT')
     else:
         port = 5000
-    app.run(debug=True)
+    app.run(host=host, port=port, debug=True)
