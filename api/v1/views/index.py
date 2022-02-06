@@ -23,7 +23,7 @@ def returnstuff():
 def stuff():
     '''JSON Responses'''
     todos = {
-        'states': State, 'users': User
+        'states': State, 'users': User,
         'amenities': Amenity, 'cities': City,
         'places': Place, 'reviews': Review
     }
