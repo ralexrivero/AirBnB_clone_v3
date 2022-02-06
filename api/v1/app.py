@@ -3,9 +3,9 @@
 
 from flask import Flask
 from flask_cors import CORS
-from api.v1.views import app_views
 from models import storage
 from os import getenv
+from api.v1.views import app_views
 import jsonify
 
 
