@@ -13,10 +13,10 @@ import jsonify
 from api.v1.views import app_views
 
 
-@app_views.route('/returnstuff')
+@app_views.route('/status')
 def returnstuff():
     '''return stuff'''
-    return jsonify(teturnstuff='200')
+    return jsonify(status='200')
 
 
 @app_views.route('/stuff')
