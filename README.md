@@ -29,7 +29,13 @@ The console is the first segment of the AirBnB project at Holberton School that 
 
 ## Environment
 
-This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.4.3)
+* SO: ``ubuntu`` 20.04 LTS
+* IDE: ``vim``, ``VSCode``
+* Shel: ``bash``
+* language ``python`` 3.8
+* Style guidelines: ``PEP8``, ``pycodestyle``
+* Version control: ``git``
+* ``ssh``
 
 ## Installation
 
@@ -60,7 +66,7 @@ List of commands this console current supports:
   * `def save(self)` - Updates the attribute `updated_at` with the current datetime
   * `def to_dict(self)` - returns a dictionary containing all keys/values of the instance
 
-*Classes inherited from Base Model:
+* Classes inherited from Base Model:
   * [amenity.py](/models/amenity.py)
   * [city.py](/models/city.py)
   * [place.py](/models/place.py)
@@ -68,13 +74,13 @@ List of commands this console current supports:
   * [state.py](/models/state.py)
   * [user.py](/models/user.py)
 
-### `/models/engine` directory contains File Storage class that handles JASON serialization and deserialization :
+### `/models/engine` directory contains File Storage class that handles JASON serialization and deserialization
 
 * [file_storage.py](/models/engine/file_storage.py) - serializes instances to a JSON file & deserializes back to instances
   * `def all(self)` - returns the dictionary __objects
   * `def new(self, obj)` - sets in __objects the obj with key <obj class name>.id
   * `def save(self)` - serializes __objects to the JSON file (path: __file_path)
-  * ` def reload(self)` -  deserializes the JSON file to __objects
+  * `def reload(self)` -  deserializes the JSON file to __objects
 
 ### `/tests` directory contains all unit test cases for this project:
 
