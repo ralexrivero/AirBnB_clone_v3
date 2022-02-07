@@ -13,13 +13,13 @@ from flask import jsonify
 from api.v1.views import app_views
 
 
-@app_views.route('/status')
+@app_views.route('/status', strict_slashes=False)
 def returnstuff():
     '''return stuff'''
-    return jsonify(status='200')
+    return jsonify(status='OK')
 
 
-@app_views.route('/stuff')
+@app_views.route('/stuff', strict_slashes=False)
 def stuff():
     '''JSON Responses'''
     todos = {
