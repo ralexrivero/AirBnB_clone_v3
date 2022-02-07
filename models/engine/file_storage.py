@@ -80,4 +80,4 @@ class FileStorage:
 
     def count(self, cls=None):
         '''class that is (optional)'''
-            return (len(self.all(cls)))
+        return (len(self.all(cls)))
