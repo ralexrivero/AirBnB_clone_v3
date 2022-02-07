@@ -7,12 +7,19 @@
 ## Environment
 
 * OS: ``ubuntu``
-* Continer: ``Docker``
+* Language: ``python``
 
-Docker mysql
-``docker pull mysql:5.7.37``
-Run mysql container
-``docker run -d --rm --name mysqlAirBnbV3 -e MYSQL_ROOT_PASSWORD=78215617 mysql:5.7.37``
+## Unit Test
+
+> Discover all test
+
+```bash
+$ python3 -m unittest discover tests 2>&1 | tail -1
+```
+
+```bash
+$ HBNB_ENV=test HBNB_MYSQL_USER=hbnb_test HBNB_MYSQL_PWD=hbnb_test_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_test_db HBNB_TYPE_STORAGE=db python3 -m unittest discover tests 2>&1 /dev/null | tail -n 1
+```
 
 ## AirBnB Clone - The Console
 
