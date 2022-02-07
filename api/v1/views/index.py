@@ -29,4 +29,4 @@ def stuff():
     }
     for key in todos:
         todos[key] = storage.count(todos[key])
-    return jsonfy(todos)
+    return jsonify(todos)
