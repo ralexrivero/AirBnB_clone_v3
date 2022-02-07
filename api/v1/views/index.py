@@ -19,7 +19,7 @@ def returnstuff():
     return jsonify(status='OK')
 
 
-@app_views.route('/stuff', strict_slashes=False)
+@app_views.route('/stats', strict_slashes=False)
 def stuff():
     '''JSON Responses'''
     todos = {
