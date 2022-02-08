@@ -2,28 +2,27 @@
 '''Flask server (variable app)'''
 
 from flask import Flask
-from flask_cors import CORS
 from models import storage
 from os import getenv
 from api.v1.views import app_views
-import jsonify
+from flask import jsonify
 
 
 app = Flask(__name__)
 app.register_blueprint(app_views)
-cors = Cors(app, resources={r'/api/*': {'origins': '0.0.0.0'}})
+app.url_map.strict_slashes = False
 
 
 @app.teardown_appcontext
-def downtear(ex):
+def downtear(self):
     '''Status of your API'''
     storage.close()
 
 
 @app.errorhandler(404)
-def page_not_found(e):
+def page_not_found(error):
     '''return render_template'''
-    return jsonify({'error' : 'Not found'})
+    return jsonify({'error': 'Not found'}), 404
 
 
 if __name__ == "__main__":
@@ -31,8 +30,8 @@ if __name__ == "__main__":
         host = getenv('HBNB_API_HOST')
     else:
         host = '0.0.0.0'
-    if getenv('HBNB_API_HOST'):
+    if getenv('HBNB_API_PORT'):
         port = getenv('HBNB_API_PORT')
     else:
         port = 5000
-    app.run(host=host, port=port, debug=True)
+    app.run(host=host, port=port, threaded=True)
