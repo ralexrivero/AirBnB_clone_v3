@@ -9,11 +9,7 @@ from models.state import State
 from flask import request
 
 
-
 @app_views.route('/status', methods=['GET'] strict_slashes=False)
-"""GET /api/v1/states"""
-
-
 def toGet():
     '''getting thing'''
     objects = storage.all('State')
@@ -22,11 +18,9 @@ def toGet():
         lista.append(state.to_dict())
     return jsonify(lista)
 
+
 @app_views.route('/states/<_id>', methods=['GET'],
                  strict_slashes=False)
-"""GET /api/v1/states/<state_id>"""
-
-
 def toGetid():
     '''Updates a State object id'''
     objects = .get('State', 'state_id')
@@ -35,9 +29,6 @@ def toGetid():
     return jsonify(objects.to_dict()), 'OK'
 
 
-#DELETE /api/v1/states/<state_id>
-
-#POST /api/v1/states
 @app_views.route('/states/', methods=['POST'],
                  strict_slashes=False)
 def posting():
@@ -69,7 +60,6 @@ def putinV():
             setattr(stateObject, key)
     storage.save()
     return jsonify(stateObject.to_dict()), '200'
+
+
 request.get_json
-
-#PUT /api/v1/states/<state_id>
-
