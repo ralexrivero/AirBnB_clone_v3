@@ -13,7 +13,7 @@ app.url_map.strict_slashes = False
 
 
 @app.teardown_appcontext
-def downtear(exception):
+def downtear(self):
     '''Status of your API'''
     storage.close()
 
@@ -21,7 +21,7 @@ def downtear(exception):
 @app.errorhandler(404)
 def page_not_found(error):
     '''return render_template'''
-    return jsonify('error': 'Not found'), 404
+    return jsonify('error='Not found'), 404
 
 
 if __name__ == "__main__":
