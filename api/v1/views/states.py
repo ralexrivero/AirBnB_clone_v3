@@ -62,4 +62,13 @@ def putinV():
     return jsonify(stateObject.to_dict()), '200'
 
 
-request.get_json
+@app_views.route('/states/<state_id>', methods=['DELETE'],
+                 strict_slashes=False)
+def deleting():
+    ''' to delete an onbject'''
+    stateObject = storage.get(State, state_id)
+    if stateObject is None:
+        abort(404)
+    storage.delete(stateObject)
+    storage.save()
+    return jsonify({}), '200'
