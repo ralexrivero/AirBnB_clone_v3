@@ -14,7 +14,7 @@ app.url_map.strict_slashes = False
 
 
 @app.teardown_appcontext
-def downtear(self):
+def downtear(exception):
     '''Status of your API'''
     storage.close()
 
