@@ -19,11 +19,11 @@ def toGet():
     return jsonify(lista)
 
 
-@app_views.route('/states/<_id>', methods=['GET'],
+@app_views.route('/states/<string:stateid>', methods=['GET'],
                  strict_slashes=False)
 def toGetid():
     '''Updates a State object id'''
-    objects = .get('State', 'state_id')
+    objects = storage.get('State', 'state_id')
     if objects is None:
         abort(404)
     return jsonify(objects.to_dict()), 'OK'
