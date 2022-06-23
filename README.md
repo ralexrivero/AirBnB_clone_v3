@@ -4,9 +4,6 @@
 
 ![AirBnB clone](img/homehero_v3.png)
 
-# General
-
-* API
 
 ## AirBnB Clone - The Console
 
