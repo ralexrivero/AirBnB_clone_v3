@@ -198,4 +198,4 @@ No known bugs at this time.
 > Samierage Akaiso
 
 <!-- Linkedin -->
-[![Linkedin](https://img.shields.io/badge/LinkedIn-blue?style=social&logo=linkedin)](https://www.linkedin.com/in/samierage/)
+[![Linkedin](https://img.shields.io/badge/LinkedIn-blue?style=social&logo=linkedin)](https://www.linkedin.com/in/samierage/) <!-- github --> [![Github](https://img.shields.io/github/followers/ralexrivero?style=social)](https://github.com/Samierage/)
